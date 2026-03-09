@@ -1,0 +1,19 @@
+<!-- Author: James Carl Bernabe
+Activity Title: AX003 – Angular HTTP Client
+Date Completed: January 14, 2024  -->
+
+<div class="bible">
+<h1>Bible Verse</h1>
+<form class="bibleform" (submit)="getBibleVerse(verseReference.value, $event,version.value)">
+    <input type="text" #verseReference placeholder="Complete Verse ex. John 3:16">
+    <select name="room" id="room1" #version>
+        <option value="kjv">King James Version</option>
+        <option value="bbe" >Bible in Basic English</option>
+    </select>
+    <button type="submit">Get Verse</button>
+</form>
+<br><br>
+<div class="output"><span class="verse">{{vresult?.reference}}&nbsp; &nbsp; </span>{{vresult?.text}}</div>
+</div>
+<!-- Stringify JSON Data -->
+
